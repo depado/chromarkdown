@@ -1,0 +1,23 @@
+workspace:
+  base: /go
+  path: src/github.com/Depado/chromarkdown
+
+pipeline:
+  prerequisites:
+    image: "golang:latest"
+    commands: 
+      - go version
+      - go get -u github.com/golang/dep/cmd/dep
+      - dep ensure -vendor-only
+
+  linter:
+    image: "golang:latest"
+    commands:
+      - go get -u github.com/alecthomas/gometalinter
+      - gometalinter --install --force
+      - gometalinter --vendor --deadline=100s ./... 
+
+  test:
+    image: "golang:latest"
+    commands:
+      - go test -cover -failfast ./...

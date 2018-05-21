@@ -15,5 +15,6 @@
 .glide/
 vendor/
 chromarkdown
-in.md
 out.html
+*-packr.go
+input.md
