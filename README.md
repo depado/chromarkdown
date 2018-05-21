@@ -52,6 +52,13 @@ $ packr install
 
 ## Install
 
+Pre-compiled binaries can be found in the [releases](https://github.com/Depado/chromarkdown/releases)
+tab.
+
+```
+$ wget https://github.com/Depado/chromarkdown/releases/download/v1.0.0/chromarkdown_linux_amd64
+```
+
 ## Usage
 
 Once installed you can run the `chromarkdown` command:
