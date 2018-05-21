@@ -15,7 +15,7 @@ pipeline:
     commands:
       - go get -u github.com/alecthomas/gometalinter
       - gometalinter --install --force
-      - gometalinter --vendor --deadline=100s ./... 
+      - gometalinter --vendor --disable=gotype --deadline=100s ./... 
 
   test:
     image: "golang:latest"
