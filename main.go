@@ -15,27 +15,31 @@ import (
 	bf "gopkg.in/russross/blackfriday.v2"
 )
 
-// Built in extensions for the markdown renderer
-var exts = bf.NoIntraEmphasis | bf.Tables | bf.FencedCode | bf.Autolink |
-	bf.Strikethrough | bf.SpaceHeadings | bf.BackslashLineBreak |
-	bf.DefinitionLists | bf.Footnotes
-
-// Built in flags for the markdown renderer
-var flags = bf.UseXHTML | bf.Smartypants | bf.SmartypantsFractions |
-	bf.SmartypantsDashes | bf.SmartypantsLatexDashes | bf.TOC
-
 // GlobCSS is a byte slice containing the style CSS of the renderer
 var GlobCSS template.CSS
 
 // render takes a []byte input and runs the mardown render (with the bfchroma
 // plugin enabled and with default values)
 func render(input []byte) []byte {
+	// Flags and extensions setup for blackfriday
+	var exts = bf.NoIntraEmphasis | bf.Tables | bf.FencedCode | bf.Autolink |
+		bf.Strikethrough | bf.SpaceHeadings | bf.BackslashLineBreak |
+		bf.DefinitionLists | bf.Footnotes
+	var flags = bf.UseXHTML | bf.Smartypants | bf.SmartypantsFractions |
+		bf.SmartypantsDashes | bf.SmartypantsLatexDashes
+	if !viper.GetBool("no-toc") {
+		flags = flags | bf.TOC
+	}
+
+	// Setup the renderer
 	r := bfchroma.NewRenderer(
 		bfchroma.WithoutAutodetect(),
 		bfchroma.Extend(bf.NewHTMLRenderer(bf.HTMLRendererParameters{Flags: flags})),
 		bfchroma.Style(viper.GetString("theme")),
 		bfchroma.ChromaOptions(html.WithClasses()),
 	)
+
+	// GlobalCSS component
 	if GlobCSS == "" && r.Formatter.Classes {
 		b := new(bytes.Buffer)
 		if err := r.Formatter.WriteCSS(b, r.Style); err != nil {
@@ -43,6 +47,8 @@ func render(input []byte) []byte {
 		}
 		GlobCSS = template.CSS(b.String())
 	}
+
+	// Run the renderer
 	return bf.Run(
 		input,
 		bf.WithRenderer(r),
@@ -90,6 +96,7 @@ func init() {
 	rootCmd.PersistentFlags().StringP("output", "o", "out.html", "specify the path of the output HTML")
 	rootCmd.PersistentFlags().StringP("title", "t", "Ouput", "Specify the title of the HTML page")
 	rootCmd.PersistentFlags().String("theme", "monokai", "Specify the theme for syntax highlighting")
+	rootCmd.PersistentFlags().Bool("no-toc", false, "Disable the table of content")
 	if err := viper.BindPFlags(rootCmd.PersistentFlags()); err != nil {
 		logrus.WithError(err).Fatal("Couldn't bind flags")
 	}
