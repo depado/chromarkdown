@@ -33,7 +33,7 @@ func render(input []byte) []byte {
 	r := bfchroma.NewRenderer(
 		bfchroma.WithoutAutodetect(),
 		bfchroma.Extend(bf.NewHTMLRenderer(bf.HTMLRendererParameters{Flags: flags})),
-		bfchroma.Style("monokai"),
+		bfchroma.Style(viper.GetString("theme")),
 		bfchroma.ChromaOptions(html.WithClasses()),
 	)
 	if GlobCSS == "" && r.Formatter.Classes {
@@ -89,6 +89,7 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 func init() {
 	rootCmd.PersistentFlags().StringP("output", "o", "out.html", "specify the path of the output HTML")
 	rootCmd.PersistentFlags().StringP("title", "t", "Ouput", "Specify the title of the HTML page")
+	rootCmd.PersistentFlags().String("theme", "monokai", "Specify the theme for syntax highlighting")
 	if err := viper.BindPFlags(rootCmd.PersistentFlags()); err != nil {
 		logrus.WithError(err).Fatal("Couldn't bind flags")
 	}
