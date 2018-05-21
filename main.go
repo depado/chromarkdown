@@ -70,14 +70,14 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 		if fd, err = os.Create(viper.GetString("output")); err != nil {
 			logrus.WithError(err).Fatal("Couldn't create file")
 		}
-		defer fd.Close()
+		defer fd.Close() // nolint: errcheck
 
 		if in, err = ioutil.ReadFile(args[0]); err != nil {
 			logrus.WithError(err).Fatal("Couldn't read in.md")
 		}
 		err = t.ExecuteTemplate(fd, "output", map[string]interface{}{
 			"title":    viper.GetString("title"),
-			"rendered": template.HTML(string(render(in))),
+			"rendered": template.HTML(string(render(in))), // nolint: gas
 			"css":      GlobCSS,
 		})
 		if err != nil {
@@ -89,9 +89,13 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 func init() {
 	rootCmd.PersistentFlags().StringP("output", "o", "out.html", "specify the path of the output HTML")
 	rootCmd.PersistentFlags().StringP("title", "t", "Ouput", "Specify the title of the HTML page")
-	viper.BindPFlags(rootCmd.PersistentFlags())
+	if err := viper.BindPFlags(rootCmd.PersistentFlags()); err != nil {
+		logrus.WithError(err).Fatal("Couldn't bind flags")
+	}
 }
 
 func main() {
-	rootCmd.Execute()
+	if err := rootCmd.Execute(); err != nil {
+		logrus.WithError(err).Fatal("Couldn't run root command")
+	}
 }
