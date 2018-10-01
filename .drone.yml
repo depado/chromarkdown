@@ -13,9 +13,8 @@ pipeline:
   linter:
     image: "golang:latest"
     commands:
-      - go get -u github.com/alecthomas/gometalinter
-      - gometalinter --install --force
-      - gometalinter --vendor --disable=gotype --deadline=100s ./... 
+      - go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+      - golangci-lint run
 
   test:
     image: "golang:latest"
