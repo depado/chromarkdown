@@ -7,6 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Depado/chromarkdown/blob/master/LICENSE)
 [![Godoc](https://godoc.org/github.com/Depado/chromarkdown?status.svg)](https://godoc.org/github.com/Depado/chromarkdown)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/Depado)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown?ref=badge_shield)
 
 Build single-file static HTML page with Chroma (syntax highlighting) and Markdown
 
@@ -79,3 +80,7 @@ Flags:
       --theme string    Specify the theme for syntax highlighting (default "monokai")
   -t, --title string    Specify the title of the HTML page (default "Ouput")
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown?ref=badge_large)
