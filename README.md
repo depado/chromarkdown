@@ -1,5 +1,7 @@
 # Chromarkdown
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 ![Go Version](https://img.shields.io/badge/Go%20Version-latest-brightgreen.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/Depado/chromarkdown)](https://goreportcard.com/report/github.com/Depado/chromarkdown)
 [![Build Status](https://drone.depado.eu/api/badges/Depado/chromarkdown/status.svg)](https://drone.depado.eu/Depado/chromarkdown)

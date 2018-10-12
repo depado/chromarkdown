@@ -17,4 +17,4 @@ vendor/
 chromarkdown
 out.html
 *-packr.go
-input.md
+in*.md

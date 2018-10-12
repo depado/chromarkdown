@@ -27,15 +27,31 @@
 
 [[constraint]]
   name = "github.com/Depado/bfchroma"
-  version = "1.1.0"
+  version = "1.1.1"
+
+[[constraint]]
+  name = "github.com/alecthomas/chroma"
+  version = "0.4.0"
+
+[[constraint]]
+  name = "github.com/gobuffalo/packr"
+  version = "1.13.7"
 
 [[constraint]]
   name = "github.com/sirupsen/logrus"
-  version = "1.0.5"
+  version = "1.1.1"
+
+[[constraint]]
+  name = "github.com/spf13/cobra"
+  version = "0.0.3"
+
+[[constraint]]
+  name = "github.com/spf13/viper"
+  version = "1.2.1"
 
 [[constraint]]
   name = "gopkg.in/russross/blackfriday.v2"
-  version = "2.0.0"
+  version = "2.0.1"
 
 [prune]
   go-tests = true
