@@ -9,10 +9,10 @@ import (
 	"github.com/Depado/bfchroma"
 	"github.com/alecthomas/chroma/formatters/html"
 	"github.com/gobuffalo/packr"
+	bf "github.com/russross/blackfriday/v2"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	bf "gopkg.in/russross/blackfriday.v2"
 )
 
 // GlobCSS is a byte slice containing the style CSS of the renderer
@@ -36,7 +36,7 @@ func render(input []byte) []byte {
 		bfchroma.WithoutAutodetect(),
 		bfchroma.Extend(bf.NewHTMLRenderer(bf.HTMLRendererParameters{Flags: flags})),
 		bfchroma.Style(viper.GetString("theme")),
-		bfchroma.ChromaOptions(html.WithClasses()),
+		bfchroma.ChromaOptions(html.WithClasses(true)),
 	)
 
 	// GlobalCSS component
@@ -69,7 +69,11 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 		var in []byte
 
 		box := packr.NewBox("./templates")
-		if t, err = template.New("output").Parse(box.String("index.tmpl")); err != nil {
+		s, err := box.FindString("index.tmpl")
+		if err != nil {
+			logrus.WithError(err).Fatal("Unable to find template")
+		}
+		if t, err = template.New("output").Parse(s); err != nil {
 			logrus.WithError(err).Fatal("Couldn't parse template")
 		}
 
