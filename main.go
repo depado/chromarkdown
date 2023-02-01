@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"html/template"
-	"io/ioutil"
 	"os"
 
 	"github.com/Depado/bfchroma"
@@ -82,7 +81,7 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 		}
 		defer fd.Close() // nolint: errcheck
 
-		if in, err = ioutil.ReadFile(args[0]); err != nil {
+		if in, err = os.ReadFile(args[0]); err != nil {
 			logrus.WithError(err).Fatal("Couldn't read in.md")
 		}
 		err = t.ExecuteTemplate(fd, "output", map[string]interface{}{
