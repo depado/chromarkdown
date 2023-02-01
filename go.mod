@@ -6,6 +6,7 @@ require (
 	github.com/Depado/bfchroma v1.3.0
 	github.com/alecthomas/chroma v0.10.0
 	github.com/gobuffalo/packr v1.30.1
+	github.com/gobuffalo/packr/v2 v2.8.3
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.6.1
