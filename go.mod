@@ -1,6 +1,6 @@
 module github.com/Depado/chromarkdown
 
-go 1.19
+go 1.20
 
 require (
 	github.com/Depado/bfchroma/v2 v2.0.0

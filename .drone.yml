@@ -5,7 +5,7 @@ name: default
 
 steps:
   - name: build
-    image: golang:1.19.5
+    image: golang:1.20
     volumes:
       - name: deps
         path: /go
@@ -13,7 +13,7 @@ steps:
       - go build
 
   - name: linter
-    image: golang:1.19.5
+    image: golang:1.20
     volumes:
       - name: deps
         path: /go
