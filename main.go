@@ -7,7 +7,7 @@ import (
 
 	"github.com/Depado/bfchroma"
 	"github.com/alecthomas/chroma/formatters/html"
-	"github.com/gobuffalo/packr"
+	"github.com/gobuffalo/packr/v2"
 	bf "github.com/russross/blackfriday/v2"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
