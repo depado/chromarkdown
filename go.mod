@@ -3,8 +3,6 @@ module github.com/Depado/chromarkdown
 go 1.19
 
 require (
-	github.com/Depado/bfchroma v1.3.0
-	github.com/alecthomas/chroma v0.10.0
 	github.com/gobuffalo/packr/v2 v2.8.3
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/sirupsen/logrus v1.9.0
@@ -13,6 +11,8 @@ require (
 )
 
 require (
+	github.com/Depado/bfchroma/v2 v2.0.0
+	github.com/alecthomas/chroma/v2 v2.4.0
 	github.com/dlclark/regexp2 v1.8.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gobuffalo/logger v1.0.7 // indirect

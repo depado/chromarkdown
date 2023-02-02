@@ -5,8 +5,8 @@ import (
 	"html/template"
 	"os"
 
-	"github.com/Depado/bfchroma"
-	"github.com/alecthomas/chroma/formatters/html"
+	"github.com/Depado/bfchroma/v2"
+	"github.com/alecthomas/chroma/v2/formatters/html"
 	"github.com/gobuffalo/packr/v2"
 	bf "github.com/russross/blackfriday/v2"
 	"github.com/sirupsen/logrus"
