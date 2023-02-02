@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/Depado/bfchroma v1.3.0
+	github.com/Depado/bfchroma/v2 v2.0.0
 	github.com/alecthomas/chroma v0.10.0
 	github.com/gobuffalo/packr/v2 v2.8.3
 	github.com/russross/blackfriday/v2 v2.1.0
