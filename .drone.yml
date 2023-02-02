@@ -10,8 +10,7 @@ steps:
       - name: deps
         path: /go
     commands:
-      - go get -u github.com/gobuffalo/packr/...
-      - packr build
+      - go build
 
   - name: linter
     image: golang:1.19.5

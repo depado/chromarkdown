@@ -7,15 +7,19 @@ import (
 
 	"github.com/Depado/bfchroma/v2"
 	"github.com/alecthomas/chroma/v2/formatters/html"
-	"github.com/gobuffalo/packr/v2"
 	bf "github.com/russross/blackfriday/v2"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+
+	_ "embed"
 )
 
 // GlobCSS is a byte slice containing the style CSS of the renderer
 var GlobCSS template.CSS
+
+//go:embed templates/index.tmpl
+var IndexTemplate string
 
 // render takes a []byte input and runs the mardown render (with the bfchroma
 // plugin enabled and with default values)
@@ -67,12 +71,7 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 		var t *template.Template
 		var in []byte
 
-		box := packr.NewBox("./templates")
-		s, err := box.FindString("index.tmpl")
-		if err != nil {
-			logrus.WithError(err).Fatal("Unable to find template")
-		}
-		if t, err = template.New("output").Parse(s); err != nil {
+		if t, err = template.New("output").Parse(IndexTemplate); err != nil {
 			logrus.WithError(err).Fatal("Couldn't parse template")
 		}
 
