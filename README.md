@@ -4,7 +4,7 @@
 
 ![Go Version](https://img.shields.io/badge/Go%20Version-latest-brightgreen.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/Depado/chromarkdown)](https://goreportcard.com/report/github.com/Depado/chromarkdown)
-[![Build Status](https://drone.depa.do/api/badges/Depado/chromarkdown/status.svg)](https://drone.depado.eu/Depado/chromarkdown)
+[![Build Status](https://drone.depa.do/api/badges/Depado/chromarkdown/status.svg)](https://drone.depa.do/Depado/chromarkdown)
 [![codecov](https://codecov.io/gh/Depado/chromarkdown/branch/master/graph/badge.svg)](https://codecov.io/gh/Depado/chromarkdown)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Depado/chromarkdown/blob/master/LICENSE)
 [![Godoc](https://godoc.org/github.com/Depado/chromarkdown?status.svg)](https://godoc.org/github.com/Depado/chromarkdown)
@@ -23,12 +23,12 @@ following operations:
 
 - Syntax highlighting thanks to [chroma](https://github.com/alecthomas/chroma)
 - Markdown rendering using [blackfriday](https://github.com/russross/blackfriday)
-- Embedded [Roboto](https://fonts.google.com/specimen/Roboto) and 
+- Embedded [Roboto](https://fonts.google.com/specimen/Roboto) and
 [Roboto-mono](https://fonts.google.com/specimen/Roboto+Mono) fonts
 - Dynamic CSS for Syntax Highlighter according to the chosen theme
-- Single-file (one HTML file) output with embedded styles and fonts (no network 
+- Single-file (one HTML file) output with embedded styles and fonts (no network
 call)
-- Responsive page with simple design according to 
+- Responsive page with simple design according to
 [bettermotherfuckingwebsite](http://bettermotherfuckingwebsite.com/)
 
 ## Build From Source
@@ -39,7 +39,7 @@ to embed the template in the go binary.
 ```sh
 $ go get -u github.com/gobuffalo/packr/...
 $ packr build
-$ # or, to embed and install: 
+$ # or, to embed and install:
 $ packr install
 ```
 
