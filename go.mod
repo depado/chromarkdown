@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/Depado/bfchroma/v2 v2.0.0
-	github.com/alecthomas/chroma/v2 v2.7.0
+	github.com/alecthomas/chroma/v2 v2.8.0
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.7.0
