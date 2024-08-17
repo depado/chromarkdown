@@ -29,18 +29,6 @@ call)
 - Responsive page with simple design according to
 [bettermotherfuckingwebsite](http://bettermotherfuckingwebsite.com/)
 
-## Build From Source
-
-Chromarkdown is using [packr](https://github.com/gobuffalo/packr)
-to embed the template in the go binary.
-
-```sh
-$ go get -u github.com/gobuffalo/packr/...
-$ packr build
-$ # or, to embed and install:
-$ packr install
-```
-
 ## Install
 
 Pre-compiled binaries can be found in the [releases](https://github.com/depado/chromarkdown/releases)
