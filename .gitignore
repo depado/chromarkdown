@@ -18,3 +18,4 @@ chromarkdown
 out.html
 *-packr.go
 in*.md
+dist/

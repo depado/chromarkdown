@@ -28,3 +28,6 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
+
+sboms:
+  - artifacts: archive
