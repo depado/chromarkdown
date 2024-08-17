@@ -3,17 +3,15 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ![Go Version](https://img.shields.io/badge/Go%20Version-latest-brightgreen.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Depado/chromarkdown)](https://goreportcard.com/report/github.com/Depado/chromarkdown)
-[![Build Status](https://drone.depa.do/api/badges/Depado/chromarkdown/status.svg)](https://drone.depa.do/Depado/chromarkdown)
-[![codecov](https://codecov.io/gh/Depado/chromarkdown/branch/master/graph/badge.svg)](https://codecov.io/gh/Depado/chromarkdown)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Depado/chromarkdown/blob/master/LICENSE)
-[![Godoc](https://godoc.org/github.com/Depado/chromarkdown?status.svg)](https://godoc.org/github.com/Depado/chromarkdown)
+[![Go Report Card](https://goreportcard.com/badge/github.com/depado/chromarkdown)](https://goreportcard.com/report/github.com/depado/chromarkdown)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/depado/chromarkdown/blob/master/LICENSE)
+[![Godoc](https://godoc.org/github.com/depado/chromarkdown?status.svg)](https://godoc.org/github.com/depado/chromarkdown)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/Depado)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown?ref=badge_shield)
 
 Build single-file static HTML page with Chroma (syntax highlighting) and Markdown
 
-![screenshot](https://github.com/Depado/chromarkdown/blob/master/img/screenshot.png)
+![screenshot](https://github.com/depado/chromarkdown/blob/master/img/screenshot.png)
 
 ## Introduction
 
@@ -45,11 +43,11 @@ $ packr install
 
 ## Install
 
-Pre-compiled binaries can be found in the [releases](https://github.com/Depado/chromarkdown/releases)
+Pre-compiled binaries can be found in the [releases](https://github.com/depado/chromarkdown/releases)
 tab.
 
 ```
-$ wget https://github.com/Depado/chromarkdown/releases/download/v1.0.0/chromarkdown_linux_amd64
+$ wget https://github.com/depado/chromarkdown/releases/download/v1.0.0/chromarkdown_linux_amd64
 ```
 
 ## Usage
@@ -75,4 +73,4 @@ Flags:
 
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDepado%2Fchromarkdown?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown?ref=badge_large)
