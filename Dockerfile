@@ -1,5 +1,5 @@
 # Build Step
-FROM golang:1.23.4-alpine
+FROM golang:1.23.4-alpine as builder
 
 # Source
 WORKDIR $GOPATH/src/github.com/depado/capybara
