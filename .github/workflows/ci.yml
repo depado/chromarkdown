@@ -17,7 +17,6 @@ jobs:
     uses: depado/github-actions/.github/workflows/golang.yml@main
     with:
       build-command: go build
-    
 
   docker:
     name: Docker
