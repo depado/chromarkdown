@@ -12,6 +12,6 @@ COPY . .
 RUN go build -o /tmp/chromarkdown
 
 # Final Step
-FROM gcr.io/distroless/static@sha256:d90359c7a3ad67b3c11ca44fd5f3f5208cbef546f2e692b0dc3410a869de46bf
+FROM gcr.io/distroless/static@sha256:eca24e67792afe660769e84c85332d9939772e7f76071597d179af96ac4e9e4f
 COPY --from=builder /tmp/chromarkdown /go/bin/chromarkdown
 ENTRYPOINT ["/go/bin/chromarkdown"]
