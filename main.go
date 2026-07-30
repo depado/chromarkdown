@@ -83,7 +83,7 @@ It generates standalone HTML files that includes fonts, a grid system and extra 
 		if in, err = os.ReadFile(args[0]); err != nil {
 			logrus.WithError(err).Fatal("Couldn't read in.md")
 		}
-		err = t.ExecuteTemplate(fd, "output", map[string]interface{}{
+		err = t.ExecuteTemplate(fd, "output", map[string]any{
 			"title":    viper.GetString("title"),
 			"rendered": template.HTML(string(render(in))), // nolint: gas
 			"css":      GlobCSS,
