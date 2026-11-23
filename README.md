@@ -7,11 +7,10 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/depado/chromarkdown/blob/master/LICENSE)
 [![Godoc](https://godoc.org/github.com/depado/chromarkdown?status.svg)](https://godoc.org/github.com/depado/chromarkdown)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/Depado)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdepado%2Fchromarkdown?ref=badge_shield)
 
 Build single-file static HTML page with Chroma (syntax highlighting) and Markdown
 
-![screenshot](https://github.com/depado/chromarkdown/blob/master/img/screenshot.png)
+![screenshot](https://github.com/depado/chromarkdown/blob/main/img/screenshot.png)
 
 ## Introduction
 
