@@ -4,7 +4,8 @@ go 1.26.0
 
 require (
 	github.com/Depado/bfchroma/v2 v2.0.0
-	github.com/alecthomas/chroma/v2 v2.27.0
+	github.com/alecthomas/chroma/v2 v2.2.0
+	github.com/alecthomas/chroma/v3 v3.0.0
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/sirupsen/logrus v1.10.2
 	github.com/spf13/cobra v1.10.2
@@ -12,6 +13,7 @@ require (
 )
 
 require (
+	github.com/dlclark/regexp2 v1.4.0 // indirect
 	github.com/dlclark/regexp2/v2 v2.13.2 // indirect
 	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
